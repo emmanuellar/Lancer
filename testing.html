@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Lancers</title>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+     
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+    <!-- Google imported font for pacifico & open sans -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for lancer -->
+
+<style>
+        body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .main-cont {
+      font-family: 'Ubuntu', sans-serif;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 85px auto;
+      height: 100vh;
+    }
+    .logo-img {
+      height: 30px;
+    }
+    .nav-table {
+      margin: 50px 0px;
+    }
+    .icon {
+      height: 25px;
+      margin-right: 10px;
+    }
+    .nav-txt {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    
+    /*header*/
+    .header {
+      grid-column: 2 / -1;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    }
+    .header>h3 { 
+      margin: 0px 40px;
+      font-size: 1.4rem;
+    }
+    .header p { 
+      margin: 0 7px;
+      align-self: center;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .header-items {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    .header-items>div {
+      margin: 0 13px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    .header-icon {
+      height: 25px;
+    }
+    .avatar-sm {
+      border-radius: 50%;
+      height: 45px;
+    }
+    .dropdown {
+      display: block;
+      position: relative;
+    }
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      z-index: 1;
+      width: auto;
+      background-color: #091429;
+      border-radius: 5px;
+      color: #ffffff;
+      margin-top: 100px;
+      transition: opacity ease-in 500ms;
+    }
+    .dropdown-menu.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .menu-item {
+      margin: 10px;
+      display: block;
+      text-align: center;
+      border: none;
+      border-bottom: 2px solid #091429;
+      transition: border-bottom ease-in 400ms;
+    }
+    .menu-item:hover {
+      border: none;
+      border-bottom: 2px solid #ffffff;
+    }
+    .caret-down {
+      align-self: center;
+      cursor: pointer;
+    }
+    
+    /*main body content*/
+    .content {
+      grid-column: 2 / -1;
+      text-align: center;
+    }
+    .hero-img {
+      height: 60vh;
+      width: 45vw;
+      align-self: center;
+    }
+    .content>h4 {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-flow: column nowrap;
+      margin: 60px 15vw;
+      font-family: inherit;
+    }
+    .form-label{
+      font-size: 0.8rem;
+      align-self: flex-start;
+      font-weight: bold;
+      color: #575757;
+    }
+    .inpt {
+      height: 30px;
+      margin: 10px 0 40px 0;
+      font-size: 1rem;
+      border: 1px solid #000000;
+    }
+    .txt-area {
+      margin: 10px 0 40px 0;
+      font-size: 1rem;
+      font-family: 'Ubuntu', sans-serif;
+      border: 1px solid #000000;
+    }
+    .contact-form-btn {
+      width: 155px;
+      padding: 10px 20px;
+      font-size: 18px;
+      align-self: center;
+      color: #ffffff;
+      background-color: #091429;
+      border: 1px solid #091429;
+      font-family: inherit;
+    }
+    .contact-form-btn:hover {
+      background-color: #032566;
+      border: 1px solid #032566;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    
+    /*media query*/
+    @media(max-width: 600px){
+      .main-cont {
+         grid-template-columns: repeat(4, 1fr);
+      }
+      .header {
+        grid-column: auto;
+      }
+      .header>h4 {
+        margin: 0 10px;
+      }
+      .hero-img {
+        width: 80vw;
+      }
+      .inpt, .txt-area {
+        margin: 10px 0 40px 0;
+      }
+    }
+    *{
+        font-family: "Open Sans", sans-serif;
+        box-sizing: border-box;
+    }
+    ul,li{
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    #sidebar-wrapper {
+        min-height: 150vh;
+        margin-left: -15rem;
+        -webkit-transition: margin 0.25s ease-out;
+        -moz-transition: margin 0.25s ease-out;
+        -o-transition: margin 0.25s ease-out;
+        transition: margin 0.25s ease-out;
+        background-color: #091429 !important;
+    }
+
+    i {
+        margin-right: 14px !important;
+    }
+    .nav-fa{
+        color: #000;
+        font-size:26px;
+        margin-top: 10px;
+    }
+    #sidebar-wrapper .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+    }
+    .sidebar-heading {
+        font-size: 36px;
+        font-family: "Pacifico", cursive;
+        color: azure;
+        font-size: normal;
+        font-weight: normal;
+        line-height: 63px;
+    }
+    #sidebar-wrapper .sideMenu {
+        width: 15rem;
+    }
+
+    #page-content-wrapper {
+        min-width: 100vw;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    .sideMenu a{
+        margin-top: 1rem;
+        background-color: #091429 !important;
+        color: azure;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Open Sans", sans-serif;
+    }
+  
+    @media (min-width: 768px) {
+        #sidebar-wrapper {
+            margin-left: 0;
+        }
+
+        #page-content-wrapper {
+            min-width: 0;
+            width: 100%;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: -15rem;
+        }
+    }
+
+    nav{
+        background-color:#ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .page_nav{
+        display: flex;
+}
+</style>
+<body>
+        <div class="main-cont">
+                <div class="header">
+                        <h3>Contact Support</h3>
+                        <div class="header-items">
+                          <div>
+                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/help_pvv3ie.svg" class="header-icon"></a>
+                            <a href="#"><p>Support</p></a>
+                          </div>
+                          <div>
+                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/notification_1_ddc0vh.svg" class="header-icon"></a>
+                          </div>
+                          <div class="dropdown">
+                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685959/contact-support/avatar_ofgo0e.svg" class="avatar-sm"></a>
+                            <p>Juliet</p>
+                            <img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/Vectordown-caret_fla9dn.svg" class="caret-down" onclick="drop()">
+                            <div class="dropdown-menu" id="dd-menu">
+                              <a href="#" class="menu-item">Action</a>
+                              <a href="#" class="menu-item">Another action</a>
+                              <a href="#" class="menu-item">Something else here</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        <!-- Sidebar -->
+        <div class="bg-dark border-right bar" id="sidebar-wrapper">
+          <div class="sidebar-heading">Lan<span style="color:#00F9FF">c</span>ers</div>
+          <ul class="sideMenu">
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-users" aria-hidden="true"> </i> Clients</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-calculator" aria-hidden="true"> </i> Estimates</a></li>
+
+            <li>
+                <a href="#subMenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-light dropdown-toggle"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Projects</a>
+                <ul class="collapse list-unstyled" id="subMenu">
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Status</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Overview</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Collaborators</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Task</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Documents</a>
+                    </li>
+                </ul> 
+            </li>
+  
+            <li><a href="#invoice-toggle" class="list-group-item list-group-item-action bg-light"><i class="fa fa-file-text-o" aria-hidden="true"></i></i> Invoice</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"><i class="fa fa-handshake-o"></i> Contract</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-area-chart" aria-hidden="true"></i> Proposals</a></li>
+          </ul>
+        </div>
+    
+        <!-- end of sidebar-wrapper -->
+        
+                
+        <!-- end of page-content-wrapper -->   
+        </div> 
+
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script>
+       $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+<script>
+      function drop() {
+        let x = document.getElementById('dd-menu');
+        x.classList.toggle('active');
+      }
+</script>
+</body>
+</html>
