@@ -181,10 +181,16 @@
 
         text-decoration: none;
     }
+    .botton{
+      display:none;
+    }
     @media only screen and (max-width: 580px) {
         .content-nav{
             display: none !important;
         }
+        .botton{
+      display:inline-block;
+    }
     }
     .in-circle{
         border: 1px solid black;
@@ -288,7 +294,7 @@
 
         <div id="page-content-wrapper" class="mb-5">
             <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top border-bottom">
-                <button class="btn btn-dark" id="menu-toggle">Toggle Menu</button>
+                <button class="btn btn-dark botton" id="menu-toggle">Toggle Menu</button>
                 <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     

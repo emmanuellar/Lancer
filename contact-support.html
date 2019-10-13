@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Contact Support</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-    <style>
-    body {
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Lancers</title>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+     
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+    <!-- Google imported font for pacifico & open sans -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for lancer -->
+
+<style>
+        body {
       padding: 0;
       margin: 0;
     }
@@ -21,18 +45,6 @@
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: 85px auto;
       height: 100vh;
-    }
-    
-    /*sidebar*/
-    .sidebar {
-      grid-column: 1 / 2;
-      grid-row: 1 / -1;
-      background-color: #091429;
-      color: #ffffff;
-      height: 100%;
-    }
-    .sidebar-content {
-      margin: 55px 22px;
     }
     .logo-img {
       height: 30px;
@@ -53,7 +65,7 @@
     .header {
       grid-column: 2 / -1;
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row;
       align-items: center;
       justify-content: space-between;
       background-color: #ffffff;
@@ -197,84 +209,189 @@
         margin: 10px 0 40px 0;
       }
     }
-  </style>
-  </head>
+    *{
+        font-family: "Open Sans", sans-serif;
+        box-sizing: border-box;
+    }
+    ul,li{
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    #sidebar-wrapper {
+        min-height: 150vh;
+        margin-left: -15rem;
+        -webkit-transition: margin 0.25s ease-out;
+        -moz-transition: margin 0.25s ease-out;
+        -o-transition: margin 0.25s ease-out;
+        transition: margin 0.25s ease-out;
+        background-color: #091429 !important;
+    }
 
-  <body>
-    <div class="main-cont">
-      <div class="header">
-        <h3>Contact Support</h3>
-        <div class="header-items">
-          <div>
-            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/help_pvv3ie.svg" class="header-icon"></a>
-            <a href="#"><p>Support</p></a>
-          </div>
-          <div>
-            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/notification_1_ddc0vh.svg" class="header-icon"></a>
-          </div>
-          <div class="dropdown">
-            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685959/contact-support/avatar_ofgo0e.svg" class="avatar-sm"></a>
-            <p>Juliet</p>
-            <img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/Vectordown-caret_fla9dn.svg" class="caret-down" onclick="drop()">
-            <div class="dropdown-menu" id="dd-menu">
-              <a href="#" class="menu-item">Action</a>
-              <a href="#" class="menu-item">Another action</a>
-              <a href="#" class="menu-item">Something else here</a>
-            </div>
-          </div>
+    i {
+        margin-right: 14px !important;
+    }
+    .nav-fa{
+        color: #000;
+        font-size:26px;
+        margin-top: 10px;
+    }
+    #sidebar-wrapper .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+    }
+    .sidebar-heading {
+        font-size: 36px;
+        font-family: "Pacifico", cursive;
+        color: azure;
+        font-size: normal;
+        font-weight: normal;
+        line-height: 63px;
+    }
+    #sidebar-wrapper .sideMenu {
+        width: 15rem;
+        
+    }
+
+    #page-content-wrapper {
+        min-width: 100vw;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    .sideMenu a{
+        margin-top: 1rem;
+        background-color: #091429 !important;
+        color: azure;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Open Sans", sans-serif;
+    }
+  
+    @media (min-width: 768px) {
+        #sidebar-wrapper {
+            margin-left: 0;
+            margin-top:-100px;
+        }
+
+        #page-content-wrapper {
+            min-width: 0;
+            width: 100%;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: -15rem;
+        }
+    }
+
+    nav{
+        background-color:#ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .page_nav{
+        display: flex;
+}
+</style>
+<body>
+        <div class="main-cont">
+                <div class="header">
+                        <h3>Contact Support</h3>
+                        <div class="header-items">
+                          <div>
+                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/help_pvv3ie.svg" class="header-icon"></a>
+                            <a href="#"><p>Support</p></a>
+                          </div>
+                          <div>
+                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/notification_1_ddc0vh.svg" class="header-icon"></a>
+                          </div>
+                          <div class="dropdown">
+                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685959/contact-support/avatar_ofgo0e.svg" class="avatar-sm"></a>
+                            <p>Juliet</p>
+                            <img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/Vectordown-caret_fla9dn.svg" class="caret-down" onclick="drop()">
+                            <div class="dropdown-menu" id="dd-menu">
+                              <a href="#" class="menu-item">Action</a>
+                              <a href="#" class="menu-item">Another action</a>
+                              <a href="#" class="menu-item">Something else here</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        <!-- Sidebar -->
+        <div class="bg-dark border-right bar" id="sidebar-wrapper">
+            <!-- <button class="btn btn-dark" id="menu-toggle">Toggle Menu</button> -->
+          <div class="sidebar-heading">Lan<span style="color:#00F9FF">c</span>ers</div>
+          <ul class="sideMenu">
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-users" aria-hidden="true"> </i> Clients</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-calculator" aria-hidden="true"> </i> Estimates</a></li>
+
+            <li>
+                <a href="#subMenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-light dropdown-toggle"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Projects</a>
+                <ul class="collapse list-unstyled" id="subMenu">
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Status</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Overview</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Collaborators</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Task</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Documents</a>
+                    </li>
+                </ul> 
+            </li>
+  
+            <li><a href="#invoice-toggle" class="list-group-item list-group-item-action bg-light"><i class="fa fa-file-text-o" aria-hidden="true"></i></i> Invoice</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"><i class="fa fa-handshake-o"></i> Contract</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-area-chart" aria-hidden="true"></i> Proposals</a></li>
+          </ul>
         </div>
-      </div>
-
-      <div class="sidebar">
-        <div class="sidebar-content">
-          <img class="logo-img" src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/lancers_zump2v.svg">
-          <table class="nav-table">
-            <tr>
-              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/home_ytnlm7.svg" class="icon"></td><td class="nav-txt"><a href="#">Dashboard</a></td>
-            </tr>
-            <tr>
-              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570685955/contact-support/customer_bpnu4k.svg" class="icon"></td><td class="nav-txt"><a href="#">Clients</a></td>
-            </tr>
-            <tr>
-              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570685955/contact-support/budget_1_bosmd2.svg" class="icon"></td><td class="nav-txt"><a href="#">Estimates</a></td>
-            </tr>
-            <tr>
-              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570685955/contact-support/Group_khqbxt.svg" class="icon"></td><td class="nav-txt"><a href="#">Projects</a></td>
-            </tr>
-            <tr>
-              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570685955/contact-support/Group-invoices_i80pqb.svg" class="icon"></td><td class="nav-txt"><a href="#">Invoices</a></td>
-            </tr>
-            <tr>
-              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/policy_jn93r8.svg" class="icon"></td><td class="nav-txt"><a href="#">Contracts</a></td>
-            </tr>
-            <tr>
-              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570685958/contact-support/approval_ylo1xp.svg" class="icon"></td><td class="nav-txt"><a href="#">Proposals</a></td>
-            </tr>
-          </table>
+    
+        <!-- end of sidebar-wrapper -->
+        <div class="content">
+          <img src="https://res.cloudinary.com/slarin/image/upload/v1570685956/contact-support/Contact_us_1_rm3q98.png" alt="contact help" class="hero-img">
+          <h4>Read the frequently asked questions<br>or send us a message</h4>
+  
+          <form class="contact-form">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="inpt">
+            <label for="message" class="form-label">Message</label>
+            <textarea rows="15" class="txt-area"></textarea>
+            <button class="contact-form-btn">Send</button>
+          </form>
         </div>
-      </div>
+                
+        <!-- end of page-content-wrapper -->   
+        </div> 
 
-      <div class="content">
-        <img src="https://res.cloudinary.com/slarin/image/upload/v1570685956/contact-support/Contact_us_1_rm3q98.png" alt="contact help" class="hero-img">
-        <h4>Read the frequently asked questions<br>or send us a message</h4>
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-        <form class="contact-form">
-          <label for="subject" class="form-label">Subject</label>
-          <input type="text" class="inpt">
-          <label for="message" class="form-label">Message</label>
-          <textarea rows="15" class="txt-area"></textarea>
-          <button class="contact-form-btn">Send</button>
-        </form>
-      </div>
-
-    </div>
-
-    <script>
+  <script>
+       $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+<script>
       function drop() {
         let x = document.getElementById('dd-menu');
         x.classList.toggle('active');
       }
-    </script>
-  </body>
-
+</script>
+</body>
 </html>

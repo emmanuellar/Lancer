@@ -12,9 +12,9 @@
     <title>Lancers</title>
 
     <!-- Bootstrap core JavaScript -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
      
 
     <!-- Bootstrap core CSS -->
@@ -30,185 +30,6 @@
     <!-- Custom styles for lancer -->
 
 <style>
-        body {
-      padding: 0;
-      margin: 0;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    .main-cont {
-      font-family: 'Ubuntu', sans-serif;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: 85px auto;
-      height: 100vh;
-    }
-    .logo-img {
-      height: 30px;
-    }
-    .nav-table {
-      margin: 50px 0px;
-    }
-    .icon {
-      height: 25px;
-      margin-right: 10px;
-    }
-    .nav-txt {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    
-    /*header*/
-    .header {
-      grid-column: 2 / -1;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #ffffff;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    }
-    .header>h3 { 
-      margin: 0px 40px;
-      font-size: 1.4rem;
-    }
-    .header p { 
-      margin: 0 7px;
-      align-self: center;
-      font-weight: bold;
-      font-size: 15px;
-    }
-    .header-items {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-    }
-    .header-items>div {
-      margin: 0 13px;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-    }
-    .header-icon {
-      height: 25px;
-    }
-    .avatar-sm {
-      border-radius: 50%;
-      height: 45px;
-    }
-    .dropdown {
-      display: block;
-      position: relative;
-    }
-    .dropdown-menu {
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      z-index: 1;
-      width: auto;
-      background-color: #091429;
-      border-radius: 5px;
-      color: #ffffff;
-      margin-top: 100px;
-      transition: opacity ease-in 500ms;
-    }
-    .dropdown-menu.active {
-      visibility: visible;
-      opacity: 1;
-    }
-    .menu-item {
-      margin: 10px;
-      display: block;
-      text-align: center;
-      border: none;
-      border-bottom: 2px solid #091429;
-      transition: border-bottom ease-in 400ms;
-    }
-    .menu-item:hover {
-      border: none;
-      border-bottom: 2px solid #ffffff;
-    }
-    .caret-down {
-      align-self: center;
-      cursor: pointer;
-    }
-    
-    /*main body content*/
-    .content {
-      grid-column: 2 / -1;
-      text-align: center;
-    }
-    .hero-img {
-      height: 60vh;
-      width: 45vw;
-      align-self: center;
-    }
-    .content>h4 {
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-    .contact-form {
-      display: flex;
-      flex-flow: column nowrap;
-      margin: 60px 15vw;
-      font-family: inherit;
-    }
-    .form-label{
-      font-size: 0.8rem;
-      align-self: flex-start;
-      font-weight: bold;
-      color: #575757;
-    }
-    .inpt {
-      height: 30px;
-      margin: 10px 0 40px 0;
-      font-size: 1rem;
-      border: 1px solid #000000;
-    }
-    .txt-area {
-      margin: 10px 0 40px 0;
-      font-size: 1rem;
-      font-family: 'Ubuntu', sans-serif;
-      border: 1px solid #000000;
-    }
-    .contact-form-btn {
-      width: 155px;
-      padding: 10px 20px;
-      font-size: 18px;
-      align-self: center;
-      color: #ffffff;
-      background-color: #091429;
-      border: 1px solid #091429;
-      font-family: inherit;
-    }
-    .contact-form-btn:hover {
-      background-color: #032566;
-      border: 1px solid #032566;
-      cursor: pointer;
-      font-family: inherit;
-    }
-    
-    /*media query*/
-    @media(max-width: 600px){
-      .main-cont {
-         grid-template-columns: repeat(4, 1fr);
-      }
-      .header {
-        grid-column: auto;
-      }
-      .header>h4 {
-        margin: 0 10px;
-      }
-      .hero-img {
-        width: 80vw;
-      }
-      .inpt, .txt-area {
-        margin: 10px 0 40px 0;
-      }
-    }
     *{
         font-family: "Open Sans", sans-serif;
         box-sizing: border-box;
@@ -222,7 +43,7 @@
         overflow-x: hidden;
     }
     #sidebar-wrapper {
-        min-height: 150vh;
+        min-height: 100vh;
         margin-left: -15rem;
         -webkit-transition: margin 0.25s ease-out;
         -moz-transition: margin 0.25s ease-out;
@@ -291,35 +112,667 @@
         background-color:#ffffff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-
+    .br{
+        border-right: 1px solid #B1B1B1;
+    }
     .page_nav{
         display: flex;
+    }
+    .searchDiv input{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #b1b1b1;
+        height: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        outline: none;
+        text-indent: 32px;
+    }
+    
+    .searchDiv{
+        position: relative; 
+        left: 150px;
+    }
+    .fa-search{
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+    .circle {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        border: 1px solid #000;
+    }
+    @media only screen and (max-width: 991px) {
+        .searchDiv{
+            left: 0 !important;
+        }
+        .fa-search{
+            top: 10px !important;
+            left: 10px;
+        }
+        .br{
+            border-right: none !important;
+        }
+    }
+   a.dropdown-item:hover{
+        border-bottom: 1px solid #fff;
+        transition: 1s;
+   }
+
+   .content-nav{
+        /* Primary Blue */
+        background: #009FFF;
+        padding: 15px;
+        width: 100%;
+    }
+    .content-nav a {
+        font-weight: 60;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height */
+        color: #FFFFFF;
+
+        text-decoration: none;
+    }
+    .botton{
+      display:none;
+    }
+    @media only screen and (max-width: 580px) {
+        .content-nav{
+            display: none !important;
+        }
+        .botton{
+      display:inline-block;
+    }
+    }
+
+    aside {
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	float: left;
+	position: absolute;
+	background: #091429;
+	height: 700px;
+	width: 150px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+#lancers {
+	position: absolute;
+	left: 10.77%;
+	right: 24.62%;
+	top: 4.93%;
+	bottom: 90.04%;
+	color: #FFFFFF;
+}
+
+a {
+	cursor: pointer;
+}
+
+.title {
+	font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 25px;
+text-align: center;
+}
+
+#group1 {
+	position: absolute;
+left: 10.77%;
+right: 11.03%;
+top: 17.09%;
+bottom: 5.43%;
+}
+
+#dash {
+	position: absolute;
+left: 30.15%;
+right: 19.15%;
+top: 17.09%;
+bottom: 80.47%;
+color: #FFFFFF;
+}
+
+#group2 {
+	position: absolute;
+left: 10.77%;
+right: 41.66%;
+top: 26.56%;
+bottom: 66.66%;
+}
+
+#client {
+	position: absolute;
+left: 30.15%;
+right: 38.46%;
+top: 26.56%;
+bottom: 71%;
+color: #FFFFFF;
+}
+
+#group3 {
+	position: absolute;
+left: 10.77%;
+right: 79.17%;
+top: 36.04%;
+bottom: 67.9%;
+}
+
+#project {
+	position: absolute;
+left: 30.15%;
+right: 34.23%;
+top: 36.04%;
+bottom: 61.52%;
+color: #FFFFFF;
+}
+
+#group4 {
+	position: absolute;
+	left: 10.77%;
+right: 50.73%;
+top: 45.51%;
+bottom: 40.42%;
+}
+
+#invoice{
+	position: absolute;
+left: 30.15%;
+right: 33.85%;
+top: 45.51%;
+bottom: 52.05%;
+color: #FFFFFF;
+}
+
+#group5 {
+	position: absolute;
+	left: 10.77%;
+right: 30.97%;
+top: 54.98%;
+bottom: 34.21%;
+}
+
+#contract{
+	position: absolute;
+	left: 30.15%;
+right: 28.46%;
+top: 54.98%;
+bottom: 42.58%;
+color: #FFFFFF;
+}
+
+#group6 {
+	position: absolute;
+	left: 10.77%;
+right: 50.92%;
+top: 64.45%;
+bottom: 77%;
+}
+
+#proposal{
+	position: absolute;
+	left: 30.15%;
+right: 25%;
+top: 64.45%;
+bottom: 33.11%;
+color: #FFFFFF;
+}
+
+.header-con {
+	position: absolute;
+	left: 0%;
+top: 0%;
+bottom: 91.9%;
+background: #FFFFFF;
+}
+
+.link {
+	/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 34px;
+color: #000000;
+opacity: 0.8;
+}
+
+#pro {
+	position: absolute;
+width: 164px;
+height: 34px;
+left: 325px;
+top: 44px;
+}
+
+#cli {
+	position: absolute;
+width: 147px;
+height: 34px;
+left: 539px;
+top: 44px;
+}
+
+#set {
+	position: absolute;
+width: 116px;
+height: 34px;
+left: 741px;
+top: 44px;
+}
+
+#tools {
+	position: absolute;
+width: 252px;
+height: 34px;
+left: 912px;
+top: 44px;
+}
+
+.box1 {
+	position: absolute;
+width: 78px;
+height: 35px;
+left: 970px;
+top: 140px;
+box-sizing: border-box;
+}
+
+#edit {
+	position: absolute;
+width: 60px;
+height: 28px;
+left: 5px;
+top: 3px;
+/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 28px;
+color: #546067;
+}
+
+button {
+	border: 3px solid #546067;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.box2 {
+	position: absolute;
+width: 83px;
+height: 45px;
+left: 1060px;
+top: 140px;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+#delete {
+	position: absolute;
+width: 78px;
+height: 28px;
+left: 3px;
+top: 3px;
+/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 28px;
+color: #546067;
+}
+
+.client-info {
+	position: absolute;
+width: 953px;
+height: 781px;
+left: 300px;
+top: 200px;
+}
+
+#contact {
+	position: absolute;
+width: 176px;
+height: 55px;
+left: 25px;
+top: 20px;
+/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 50px;
+color: #000000;
+}
+
+.name {
+	position: absolute;
+width: 130px;
+height: 85px;
+left: 20px;
+top: 50px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+}
+
+#nme {
+	position: absolute;
+width: 81px;
+height: 34px;
+left: 8px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#john {
+	position: absolute;
+width: 130px;
+height: 35px;
+left: 8px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+}
+
+#add {
+	/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+}
+
+#mail {
+	position: absolute;
+width: 192px;
+height: 34px;
+left: 300px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#gmail {
+	position: absolute;
+width: 287px;
+height: 35px;
+left: 300px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+}
+
+#numb {
+	/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+}
+
+#phone {
+	position: absolute;
+width: 205px;
+height: 34px;
+left: 700px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#number {
+	position: absolute;
+width: 238px;
+height: 35px;
+left: 680px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+}
+
+#billing {
+	position: absolute;
+width: 250px;
+height: 55px;
+left: 25px;
+top: 190px;
+/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 55px;
+color: #000000;
+}
+
+.curr {
+	position: absolute;
+width: 122px;
+height: 85px;
+left: 20px;
+top: 220px;
+font-family: Ubuntu;
+font-style: normal;
+font-size: 18px;
+}
+
+#currency {
+	position: absolute;
+width: 122px;
+height: 34px;
+left: 8px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+font-weight: normal;
+}
+
+#ngn {
+	position: absolute;
+width: 64px;
+height: 35px;
+left: 8px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+font-weight: bold;
+}
+
+#home {
+	/* font-family: Ubuntu; */
+font-style: normal;
+font-size: 18px;
+}
+
+#address {
+	position: absolute;
+width: 192px;
+height: 34px;
+left: 300px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+font-weight: normal;
+}
+
+#lorem {
+	position: absolute;
+width: 287px;
+height: 35px;
+left: 300px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+font-weight: bold;
+}
+
+#place {
+	/* font-family: Ubuntu; */
+font-style: normal;
+font-size: 18px;
+}
+
+#city {
+	position: absolute;
+width: 205px;
+height: 34px;
+left: 790px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+font-weight: normal;
+}
+
+#abuja {
+	position: absolute;
+width: 238px;
+height: 35px;
+left: 780px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+font-weight: bold;
+}
+
+.cde {
+	position: absolute;
+width: 120px;
+height: 85px;
+left: 20px;
+top: 310px;
+/* font-family: Ubuntu; */
+font-style: normal;
+font-size: 18px;
+}
+
+#zip {
+	position: absolute;
+width: 120px;
+height: 34px;
+left: 8px;
+top: 20px;
+font-weight: normal;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#code {
+	position: absolute;
+	width: 51px;
+height: 35px;
+left: 8px;
+top: 55px;
+font-weight: bold;
+line-height: 35px;
+color: #000000;
+}
+
+#count {
+	/* font-family: Ubuntu; */
+font-style: normal;
+font-size: 18px;
+}
+
+#country {
+	position: absolute;
+width: 110px;
+height: 34px;
+left: 300px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+font-weight: normal;
+}
+
+#nigeria {
+	position: absolute;
+width: 99px;
+height: 35px;
+left: 300px;
+top: 55px;
+font-weight: bold;
+line-height: 35px;
+color: #000000;
+}
+
+#st {
+	/* font-family: Ubuntu; */
+font-style: normal;
+font-size: 18px;
+}
+
+#state {
+	position: absolute;
+width: 73px;
+height: 34px;
+left: 785px;
+top: 20px;
+font-weight: normal;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#abj {
+	position: absolute;
+width: 79px;
+height: 35px;
+left: 780px;
+top: 55px;
+font-weight: bold;
+line-height: 35px;
+color: #000000;
+}
+
+#more {
+	position: absolute;
+width: 118px;
+height: 55px;
+left: 25px;
+top: 450px;
+/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 55px;
+color: #000000;
+}
+
+#na {
+	position: absolute;
+width: 52px;
+height: 34px;
+left: 25px;
+top: 500px;
+/* font-family: Ubuntu; */
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 34px;
+color: #A6A6A6;
+}
+.botton{
+      display:none;
+    }
+    @media only screen and (max-width: 580px) {
+        .botton{
+      display:inline-block;
+    }
+    }
 </style>
 <body>
-        <div class="main-cont">
-                <div class="header">
-                        <h3>Contact Support</h3>
-                        <div class="header-items">
-                          <div>
-                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/help_pvv3ie.svg" class="header-icon"></a>
-                            <a href="#"><p>Support</p></a>
-                          </div>
-                          <div>
-                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/notification_1_ddc0vh.svg" class="header-icon"></a>
-                          </div>
-                          <div class="dropdown">
-                            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685959/contact-support/avatar_ofgo0e.svg" class="avatar-sm"></a>
-                            <p>Juliet</p>
-                            <img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/Vectordown-caret_fla9dn.svg" class="caret-down" onclick="drop()">
-                            <div class="dropdown-menu" id="dd-menu">
-                              <a href="#" class="menu-item">Action</a>
-                              <a href="#" class="menu-item">Another action</a>
-                              <a href="#" class="menu-item">Something else here</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+    <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-dark border-right bar" id="sidebar-wrapper">
           <div class="sidebar-heading">Lan<span style="color:#00F9FF">c</span>ers</div>
@@ -354,30 +807,106 @@
             <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-area-chart" aria-hidden="true"></i> Proposals</a></li>
           </ul>
         </div>
-    
         <!-- end of sidebar-wrapper -->
-        
-                
+
+        <div id="page-content-wrapper" class="mb-5">
+                <section>
+                        <header>
+                                
+                                <div class="navigation">
+                                    <nav class="header-con">
+                                            <a href="#" class="link">
+                                                <button class="btn btn-dark botton" id="menu-toggle">Toggle Menu</button> 
+                                            </a>
+                                        <a href="#" class="link">
+                                                
+                                           <div id="pro"> Project Info</div>
+                                        </a>
+                                    
+                                        <a href="#" class="link">
+                                            <div id="cli">Client Info</div>
+                                        </a>
+                                        <a href="#" class="link">
+                                            <div id="set">Settings</div>
+                                        </a> 
+                                        <a href="#" class="link">
+                                            <div id="tools">Tools & Resources</div>
+                                        </a>         
+                                    </nav>
+                                </div>
+                            </header>
+                    
+                        <button class="box1">
+                        <div id="edit">Edit</div>
+                        </button>
+                        <button class= "box2">
+                        <div id="delete">Delete</div>
+                        </button>
+                    </section>
+                    
+                    <section class="client-info">
+                            <div id="contact">Contact</div>
+                    
+                        <div class="name">
+                            <div id="nme">Name</div>
+                            <div id="john">John Doe</div>
+                            
+                            <div id= "add">
+                            <div id="mail">Email Address</div>
+                            <div id="gmail">Johndoe@gmail.com</div>
+                            </div>
+                            
+                            <div id="numb">
+                            <div id="phone">Phone Number</div>
+                            <div id="number">+2348064528518</div>
+                            </div>
+                        </div>
+                    
+                            <div id="billing">Billing Information</div>
+                        
+                        <div class="curr">
+                            <div id="currency">Currency</div>
+                            <div id="ngn">NGN</div>
+                            
+                            <div id= "home">
+                            <div id="address">Address</div>
+                            <div id="lorem">Lorem Ipsum Dolor Set</div>
+                            </div>
+                            
+                            <div id="place">
+                            <div id="city">City</div>
+                            <div id="abuja">Abuja</div>
+                            </div>
+                        </div>
+                    
+                        <div class="cde">
+                            <div id="zip">Zip Code</div>
+                            <div id="code">234</div>
+                            
+                            <div id= "count">
+                            <div id="country">Country</div>
+                            <div id="nigeria">Nigeria</div>
+                            </div>
+                            
+                            <div id="st">
+                            <div id="state">State</div>
+                            <div id="abj">Abuja</div>
+                            </div>
+                        </div>
+                    
+                        <div id="more">More</div>
+                        <div id="na">N/A</div>
+                    </section>
+        </div>
         <!-- end of page-content-wrapper -->   
-        </div> 
-
-   
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-  <script>
-       $("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-  });
-  </script>
+    </div> 
+<!-- end of wrapper -->    
+<body>
 <script>
-      function drop() {
-        let x = document.getElementById('dd-menu');
-        x.classList.toggle('active');
-      }
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
 </script>
 </body>
 </html>

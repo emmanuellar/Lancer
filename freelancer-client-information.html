@@ -1,20 +1,199 @@
 <!DOCTYPE html>
-<html>
-    <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-            <link  href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-        <title>
-        Client Information
-        </title>
-<style>
-    body {
-	 #E5E5E5;	
-}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-aside {
+    <title>Lancers</title>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+    <!-- Google imported font for pacifico & open sans -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for lancer -->
+
+<style>
+    *{
+        font-family: "Open Sans", sans-serif;
+        box-sizing: border-box;
+    }
+    ul,li{
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    #sidebar-wrapper {
+        min-height: 100vh;
+        margin-left: -15rem;
+        -webkit-transition: margin 0.25s ease-out;
+        -moz-transition: margin 0.25s ease-out;
+        -o-transition: margin 0.25s ease-out;
+        transition: margin 0.25s ease-out;
+        background-color: #091429 !important;
+    }
+
+    i {
+        margin-right: 14px !important;
+    }
+    .nav-fa{
+        color: #000;
+        font-size:26px;
+        margin-top: 10px;
+    }
+    #sidebar-wrapper .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+    }
+    .sidebar-heading {
+        font-size: 36px;
+        font-family: "Pacifico", cursive;
+        color: azure;
+        font-size: normal;
+        font-weight: normal;
+        line-height: 63px;
+    }
+    #sidebar-wrapper .sideMenu {
+        width: 15rem;
+    }
+
+    #page-content-wrapper {
+        min-width: 100vw;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    .sideMenu a{
+        margin-top: 1rem;
+        background-color: #091429 !important;
+        color: azure;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Open Sans", sans-serif;
+    }
+  
+    @media (min-width: 768px) {
+        #sidebar-wrapper {
+            margin-left: 0;
+        }
+
+        #page-content-wrapper {
+            min-width: 0;
+            width: 100%;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: -15rem;
+        }
+    }
+
+    nav{
+        background-color:#ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .br{
+        border-right: 1px solid #B1B1B1;
+    }
+    .page_nav{
+        display: flex;
+    }
+    .searchDiv input{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #b1b1b1;
+        height: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        outline: none;
+        text-indent: 32px;
+    }
+    
+    .searchDiv{
+        position: relative; 
+        left: 150px;
+    }
+    .fa-search{
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+    .circle {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        border: 1px solid #000;
+    }
+    @media only screen and (max-width: 991px) {
+        .searchDiv{
+            left: 0 !important;
+        }
+        .fa-search{
+            top: 10px !important;
+            left: 10px;
+        }
+        .br{
+            border-right: none !important;
+        }
+    }
+   a.dropdown-item:hover{
+        border-bottom: 1px solid #fff;
+        transition: 1s;
+   }
+
+   .content-nav{
+        /* Primary Blue */
+        background: #009FFF;
+        padding: 15px;
+        width: 100%;
+    }
+    .content-nav a {
+        font-weight: 60;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height */
+        color: #FFFFFF;
+
+        text-decoration: none;
+    }
+    .botton{
+      display:none;
+    }
+    @media only screen and (max-width: 580px) {
+        .content-nav{
+            display: none !important;
+        }
+        .botton{
+      display:inline-block;
+    }
+    }
+
+    aside {
 	left: 0%;
 	right: 0%;
 	top: 0%;
@@ -160,7 +339,7 @@ background: #FFFFFF;
 }
 
 .link {
-	font-family: Ubuntu;
+	/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: bold;
 font-size: 20px;
@@ -216,7 +395,7 @@ width: 60px;
 height: 28px;
 left: 5px;
 top: 3px;
-font-family: Ubuntu;
+/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: bold;
 font-size: 18px;
@@ -248,7 +427,7 @@ width: 78px;
 height: 28px;
 left: 3px;
 top: 3px;
-font-family: Ubuntu;
+/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: bold;
 font-size: 18px;
@@ -270,7 +449,7 @@ width: 176px;
 height: 55px;
 left: 25px;
 top: 20px;
-font-family: Ubuntu;
+/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: bold;
 font-size: 25px;
@@ -311,7 +490,7 @@ color: #000000;
 }
 
 #add {
-	font-family: Ubuntu;
+	/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -338,7 +517,7 @@ color: #000000;
 }
 
 #numb {
-	font-family: Ubuntu;
+	/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -370,7 +549,7 @@ width: 250px;
 height: 55px;
 left: 25px;
 top: 190px;
-font-family: Ubuntu;
+/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: bold;
 font-size: 25px;
@@ -412,7 +591,7 @@ font-weight: bold;
 }
 
 #home {
-	font-family: Ubuntu;
+	/* font-family: Ubuntu; */
 font-style: normal;
 font-size: 18px;
 }
@@ -440,7 +619,7 @@ font-weight: bold;
 }
 
 #place {
-	font-family: Ubuntu;
+	/* font-family: Ubuntu; */
 font-style: normal;
 font-size: 18px;
 }
@@ -473,7 +652,7 @@ width: 120px;
 height: 85px;
 left: 20px;
 top: 310px;
-font-family: Ubuntu;
+/* font-family: Ubuntu; */
 font-style: normal;
 font-size: 18px;
 }
@@ -501,7 +680,7 @@ color: #000000;
 }
 
 #count {
-	font-family: Ubuntu;
+	/* font-family: Ubuntu; */
 font-style: normal;
 font-size: 18px;
 }
@@ -529,7 +708,7 @@ color: #000000;
 }
 
 #st {
-	font-family: Ubuntu;
+	/* font-family: Ubuntu; */
 font-style: normal;
 font-size: 18px;
 }
@@ -562,7 +741,7 @@ width: 118px;
 height: 55px;
 left: 25px;
 top: 450px;
-font-family: Ubuntu;
+/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: bold;
 font-size: 25px;
@@ -576,114 +755,158 @@ width: 52px;
 height: 34px;
 left: 25px;
 top: 500px;
-font-family: Ubuntu;
+/* font-family: Ubuntu; */
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 34px;
 color: #A6A6A6;
 }
+.botton{
+      display:none;
+    }
+    @media only screen and (max-width: 580px) {
+        .botton{
+      display:inline-block;
+    }
+    }
 </style>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark border-right bar" id="sidebar-wrapper">
+          <div class="sidebar-heading">Lan<span style="color:#00F9FF">c</span>ers</div>
+          <ul class="sideMenu">
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-users" aria-hidden="true"> </i> Clients</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-calculator" aria-hidden="true"> </i> Estimates</a></li>
 
-    </head>
-
-    <body>
-    <aside>
-            <img src="lancers.png" id="lancers">
-            <div class="title">
-            <a href="#"><img src="Group 1.png" id="group1"><div id="dash">Dashboard</div></a>
-            <a href="#"><img src="Group 2.png" id="group2"><div id="client">Client</div></a>
-            <a href="#"><img src="Group 3.png" id="group3"><div id="project">Project</div><a>
-            <a href="#"><img src="Group 4.png" id="group4"><div id="invoice">Invoice</div></a>
-            <a href="#"><img src="Group 5.png" id="group5"><div id="contract">Contract</div></a>
-            <a href="#"><img src="Group 6.png" id="group6"><div id="proposal">Proposals</div></a>
-            </div>
-    </aside>
-
-<section>
-    <header>
-            <div class="navigation">
-                <nav class="header-con">
-                    <a href="#" class="link">
-                       <div id="pro"> Project Info</div>
-                    </a>
-                
-                    <a href="#" class="link">
-                        <div id="cli">Client Info</div>
-                    </a>
-                    <a href="#" class="link">
-                        <div id="set">Settings</div>
-                    </a> 
-                    <a href="#" class="link">
-                        <div id="tools">Tools & Resources</div>
-                    </a>         
-                </nav>
-            </div>
-        </header>
-
-    <button class="box1">
-    <div id="edit">Edit</div>
-    </button>
-    <button class= "box2">
-    <div id="delete">Delete</div>
-    </button>
-</section>
-
-<section class="client-info">
-        <div id="contact">Contact</div>
-
-    <div class="name">
-        <div id="nme">Name</div>
-        <div id="john">John Doe</div>
-        
-        <div id= "add">
-        <div id="mail">Email Address</div>
-        <div id="gmail">Johndoe@gmail.com</div>
+            <li>
+                <a href="#subMenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-light dropdown-toggle"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Projects</a>
+                <ul class="collapse list-unstyled" id="subMenu">
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Status</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Overview</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Collaborators</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Task</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Documents</a>
+                    </li>
+                </ul> 
+            </li>
+  
+            <li><a href="#invoice-toggle" class="list-group-item list-group-item-action bg-light"><i class="fa fa-file-text-o" aria-hidden="true"></i></i> Invoice</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"><i class="fa fa-handshake-o"></i> Contract</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-area-chart" aria-hidden="true"></i> Proposals</a></li>
+          </ul>
         </div>
-        
-        <div id="numb">
-        <div id="phone">Phone Number</div>
-        <div id="number">+2348064528518</div>
-        </div>
-    </div>
+        <!-- end of sidebar-wrapper -->
 
-        <div id="billing">Billing Information</div>
-    
-    <div class="curr">
-        <div id="currency">Currency</div>
-        <div id="ngn">NGN</div>
-        
-        <div id= "home">
-        <div id="address">Address</div>
-        <div id="lorem">Lorem Ipsum Dolor Set</div>
+        <div id="page-content-wrapper" class="mb-5">
+                <section>
+                        <header>
+                                
+                                <div class="navigation">
+                                    <nav class="header-con">
+                                            <a href="#" class="link">
+                                                <button class="btn btn-dark botton" id="menu-toggle">Toggle Menu</button> 
+                                            </a>
+                                        <a href="#" class="link">
+                                                
+                                           <div id="pro"> Project Info</div>
+                                        </a>
+                                    
+                                        <a href="#" class="link">
+                                            <div id="cli">Client Info</div>
+                                        </a>
+                                        <a href="#" class="link">
+                                            <div id="set">Settings</div>
+                                        </a> 
+                                        <a href="#" class="link">
+                                            <div id="tools">Tools & Resources</div>
+                                        </a>         
+                                    </nav>
+                                </div>
+                            </header>
+                    
+                        <button class="box1">
+                        <div id="edit">Edit</div>
+                        </button>
+                        <button class= "box2">
+                        <div id="delete">Delete</div>
+                        </button>
+                    </section>
+                    
+                    <section class="client-info">
+                            <div id="contact">Contact</div>
+                    
+                        <div class="name">
+                            <div id="nme">Name</div>
+                            <div id="john">John Doe</div>
+                            
+                            <div id= "add">
+                            <div id="mail">Email Address</div>
+                            <div id="gmail">Johndoe@gmail.com</div>
+                            </div>
+                            
+                            <div id="numb">
+                            <div id="phone">Phone Number</div>
+                            <div id="number">+2348064528518</div>
+                            </div>
+                        </div>
+                    
+                            <div id="billing">Billing Information</div>
+                        
+                        <div class="curr">
+                            <div id="currency">Currency</div>
+                            <div id="ngn">NGN</div>
+                            
+                            <div id= "home">
+                            <div id="address">Address</div>
+                            <div id="lorem">Lorem Ipsum Dolor Set</div>
+                            </div>
+                            
+                            <div id="place">
+                            <div id="city">City</div>
+                            <div id="abuja">Abuja</div>
+                            </div>
+                        </div>
+                    
+                        <div class="cde">
+                            <div id="zip">Zip Code</div>
+                            <div id="code">234</div>
+                            
+                            <div id= "count">
+                            <div id="country">Country</div>
+                            <div id="nigeria">Nigeria</div>
+                            </div>
+                            
+                            <div id="st">
+                            <div id="state">State</div>
+                            <div id="abj">Abuja</div>
+                            </div>
+                        </div>
+                    
+                        <div id="more">More</div>
+                        <div id="na">N/A</div>
+                    </section>
         </div>
-        
-        <div id="place">
-        <div id="city">City</div>
-        <div id="abuja">Abuja</div>
-        </div>
-    </div>
-
-    <div class="cde">
-        <div id="zip">Zip Code</div>
-        <div id="code">234</div>
-        
-        <div id= "count">
-        <div id="country">Country</div>
-        <div id="nigeria">Nigeria</div>
-        </div>
-        
-        <div id="st">
-        <div id="state">State</div>
-        <div id="abj">Abuja</div>
-        </div>
-    </div>
-
-    <div id="more">More</div>
-    <div id="na">N/A</div>
-</section>
-	
-	
-    </body>
-    
+        <!-- end of page-content-wrapper -->   
+    </div> 
+<!-- end of wrapper -->    
+<body>
+<script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+</script>
+</body>
 </html>
